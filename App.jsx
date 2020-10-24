@@ -9,13 +9,9 @@ function App(props) {
   return (
     <div style = {{ display: 'flex', 
     flexDirection: 'column', 
-    justifyContent:"space-evenly", 
-    height:'max-content', 
-    backgroundColor:'black',
-    width: 'max-content',
-    margin: 'auto',
-    marginTop: '75px',
-    marginBottom: '75px'
+    justifyContent:"space-evenly",
+    height:"100vh",
+    backgroundColor:'black'
     }}>
       <Price symbol="BTCUSDT" name="Bitcoin"/>
       <Price symbol="ETHUSDT" name="Ethereum"/>

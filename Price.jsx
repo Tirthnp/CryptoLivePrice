@@ -16,7 +16,7 @@ function Price(props){
             req.send();
             req.onload = (() => {
                 setPrevPrice(price);
-                setPrice(Number(JSON.parse(req.responseText).price));
+                setPrice(JSON.parse(req.responseText).price);
 
             });
         },500);
@@ -25,13 +25,13 @@ function Price(props){
 
 
     const setColor = (() => {
-        if(!(typeof(price) === 'string')){
+        
             if(price >= prevPrice) {
                 return '#7CFC00'
             }
             else return '#FF0000'
-        }
-        else return 'white'
+        
+        return 'white'
     })
 
     let style = { 
@@ -40,7 +40,7 @@ function Price(props){
         fontSize:"5em", 
         display:"flex",
         flexDirection:"row",
-        justifyContent:"space-evenly"
+        justifyContent:"space-around"
     }
     return(
         <div style={style}>
